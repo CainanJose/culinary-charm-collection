@@ -58,56 +58,47 @@ export default function Galeria() {
             <h2 className="text-3xl font-bold mb-8">Vídeos de Receitas</h2>
             <div className="space-y-8">
               <div className="recipe-card overflow-hidden">
-                <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full rounded-t-lg"
-                    src="https://www.youtube.com/embed/UM9EHqljHp4"
-                    title="Como fazer Pasta Italiana"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
+                <video
+                  controls
+                  className="w-full"
+                  poster={pastaImg}
+                >
+                  <source src="/videos/receita-1.mp4" type="video/mp4" />
+                  Seu navegador não suporta vídeos HTML5.
+                </video>
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold">Como fazer Pasta ao Molho de Tomate</h3>
-                  <p className="text-sm text-muted-foreground mt-2">Aprenda a fazer uma deliciosa pasta italiana caseira</p>
+                  <h3 className="text-xl font-semibold">Como fazer Pasta Italiana</h3>
                 </div>
               </div>
 
               <div className="recipe-card overflow-hidden">
-                <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full rounded-t-lg"
-                    src="https://www.youtube.com/embed/tspdJ6hxqnc"
-                    title="Receita de Bolo de Chocolate"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
+                <video
+                  controls
+                  className="w-full"
+                  poster={boloImg}
+                >
+                  <source src="/videos/receita-2.mp4" type="video/mp4" />
+                  Seu navegador não suporta vídeos HTML5.
+                </video>
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold">Bolo de Chocolate Fofinho</h3>
-                  <p className="text-sm text-muted-foreground mt-2">O melhor bolo de chocolate que você já experimentou</p>
+                  <h3 className="text-xl font-semibold">Receita de Bolo de Chocolate</h3>
                 </div>
               </div>
             </div>
           </section>
 
           <section className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Podcast Culinário</h2>
+            <h2 className="text-3xl font-bold mb-8">Mensagem Motivacional</h2>
             <div className="recipe-card p-8">
-              <div className="mb-4">
-                <h3 className="text-xl font-semibold mb-2">O Prazer de Cozinhar</h3>
-                <p className="text-muted-foreground">Ouça dicas e histórias inspiradoras sobre culinária</p>
-              </div>
-              <iframe
-                className="w-full rounded-lg"
-                height="180"
-                src="https://www.youtube.com/embed/Unau2Efldqk"
-                title="Podcast sobre culinária"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-              <p className="text-center mt-4 text-sm text-muted-foreground">
-                Uma mensagem especial para inspirar sua jornada culinária
+              <audio
+                controls
+                className="w-full"
+              >
+                <source src="/audio/motivacao.mp3" type="audio/mpeg" />
+                Seu navegador não suporta áudio HTML5.
+              </audio>
+              <p className="text-center mt-4 text-muted-foreground">
+                Ouça uma mensagem especial para inspirar sua jornada culinária
               </p>
             </div>
           </section>
